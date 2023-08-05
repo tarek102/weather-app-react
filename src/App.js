@@ -32,31 +32,42 @@ function App() {
         />
       </div>
       <div className="container">
-        <div className="top">
+        {data.main === undefined ?
+         <h1 className="title">Weather App</h1> :
+         <>
+         <div className="top">
           <div className="location">
             <p>{data.name}</p>      
           </div>
-          <div className="temp">
-            {data.main ? <h1>{Math.floor(data.main.temp - 273.15)}° C</h1> : null}
+          <div className="location-bottom">
+            <div className="temp">
+              {data.main ? <h1>{Math.floor(data.main.temp - 273.15)}° C</h1> : null}
+            </div>
+            <div className="description">
+              {data.weather ? <p>{data.weather[0].description}</p> : null}
+            </div>
           </div>
-          <div className="description">
-            {data.weather ? <p>{data.weather[0].description}</p> : null}
-          </div>
+          
         </div>
+        
         <div className="bottom">
-          <div className="feels">
-            {data.main ? <p className="bold">{Math.floor(data.main.feels_like - 273.15)}° C</p> : null}
-            <p>Feels</p>
-          </div>
-          <div className="humidity">
-            {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
-            <p>Humidity</p>
-          </div>
-          <div className="wind">
-            {data.wind? <p className="bold">{data.wind.speed}MPH</p> : null}
-            <p>Wind</p>
-          </div>
+        <div className="feels">
+          {data.main ? <p className="bold">{Math.floor(data.main.feels_like - 273.15)}° C</p> : null}
+          <p>Feels</p>
         </div>
+        <div className="humidity">
+          {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
+          <p>Humidity</p>
+        </div>
+        <div className="wind">
+          {data.wind? <p className="bold">{data.wind.speed}MPH</p> : null}
+          <p>Wind</p>
+        </div>
+      </div>
+      </>
+        }
+        
+        
       </div>
     </div>
   );

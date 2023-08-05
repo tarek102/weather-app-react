@@ -48,21 +48,30 @@ h1 {
   margin: auto;
   padding: 1rem 1rem;
   position: relative;
-  /* top: 10%; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.title {
+  text-align: center;
+  margin: auto;
+}
+
 .app .top {
   width: 100%;
   margin: 1rem auto;
+  padding: 1rem;
+}
+
+.location-bottom {
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
 }
 
 .app .description {
-  position: absolute;
-  left: 70%;
-  transform-origin: 0 0;
   transform: rotate(269deg);
 }
 
