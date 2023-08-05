@@ -44,7 +44,7 @@ h1 {
 
 .container{
   max-width: 700px;
-  height: 100vh;
+  height: 80vh;
   margin: auto;
   padding: 1rem 1rem;
   position: relative;
@@ -79,4 +79,23 @@ h1 {
 
 .bold {
   font-weight: 700;
+}
+
+.app .search-box {
+  text-align: center;
+}
+
+.app input {
+  margin-top: 1rem;
+  padding: .7rem .5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: 300;
+}
+
+.app input::placeholder {
+  color: #fff;
 }
