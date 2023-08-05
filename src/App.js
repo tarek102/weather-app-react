@@ -6,6 +6,7 @@ function App() {
 
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
+  const [error, setError] = useState(null);
   const api = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=66fb58f8b9a599d14f93b88b7dc8876e`
 
   const searchLocation = (event) => {
@@ -13,8 +14,13 @@ function App() {
       axios.get(api)
       .then(response => {
         setData(response.data)
-        console.log(response.data);
+        // console.log(response.data);
       }) 
+      .catch((error) => {
+        console.log(error.response.data.message);
+        setError(error)
+      })
+      
       setLocation('')
     }
   }
@@ -32,6 +38,7 @@ function App() {
         />
       </div>
       <div className="container">
+        {error ? <h2>{error.response.data.message}</h2> : null}
         {data.main === undefined ?
          <h1 className="title">Weather App</h1> :
          <>
