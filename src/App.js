@@ -34,26 +34,26 @@ function App() {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>Cairo</p>      
+            <p>{data.name}</p>      
           </div>
           <div className="temp">
-            <h1>60° F</h1>
+            {data.main ? <h1>{Math.floor(data.main.temp - 273.15)}° C</h1> : null}
           </div>
           <div className="description">
-            <p>Clouds</p>
+            {data.weather ? <p>{data.weather[0].description}</p> : null}
           </div>
         </div>
         <div className="bottom">
           <div className="feels">
-            <p className="bold">70°F</p>
+            {data.main ? <p className="bold">{Math.floor(data.main.feels_like - 273.15)}° C</p> : null}
             <p>Feels</p>
           </div>
           <div className="humidity">
-            <p className="bold">20%</p>
+            {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
             <p>Humidity</p>
           </div>
           <div className="wind">
-            <p className="bold">12MPH</p>
+            {data.wind? <p className="bold">{data.wind.speed}MPH</p> : null}
             <p>Wind</p>
           </div>
         </div>
