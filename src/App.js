@@ -14,11 +14,12 @@ function App() {
       axios.get(api)
       .then(response => {
         setData(response.data)
-        // console.log(response.data);
+        setError('')
       }) 
       .catch((error) => {
         console.log(error.response.data.message);
         setError(error)
+        setData('')
       })
       
       setLocation('')
@@ -38,7 +39,7 @@ function App() {
         />
       </div>
       <div className="container">
-        {error ? <h2>{error.response.data.message}</h2> : null}
+        {error ? <h2 className="error-msg">{error.response.data.message ==='city not found' ? error.response.data.message : 'Please enter a location'}</h2> : null}
         {data.main === undefined ?
          <h1 className="title">Weather App</h1> :
          <>
