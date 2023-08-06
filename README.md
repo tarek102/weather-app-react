@@ -45,7 +45,7 @@ To successfully utilize this project first of all you need to clone or download 
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/tarek102/airbnb/issues).
+Feel free to check the [issues page](https://github.com/tarek102/weather-app-react/issues).
 
 ## Show your support
 
