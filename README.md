@@ -7,7 +7,7 @@ In this project I have created a React App, cloning Airbnb, the web page reviews
 
 ## Live Demo
 
-[Live Demo](https://reactairbnbjs.netlify.app/)
+[Live Demo](https://tarek-weather-app.netlify.app/)
 
 ## Built With
 
