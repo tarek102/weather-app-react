@@ -3,8 +3,7 @@
 # React project (Weather Application)
 
 
-In this project I have created a React App, cloning Airbnb, the web page reviews the data dynamically from a separate data file, each card has it's own information.
-
+In this project I have created a React App, Showing the weather info based on cities. The user can search for any city and the result will be all the weather info. All the data are from Weather app APi
 ## Live Demo
 
 [Live Demo](https://tarek-weather-app.netlify.app/)
